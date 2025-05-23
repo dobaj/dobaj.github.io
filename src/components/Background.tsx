@@ -71,7 +71,7 @@ export const Background = ({ children }: { children: ReactNode }) => {
   };
 
   const calcMove = (mousePos: number, scrollPos: number) => {
-    return mousePos / 2000 - scrollPos / 1000;
+    return mousePos / 2000 - scrollPos / 750;
   };
 
   useEffect(() => {
