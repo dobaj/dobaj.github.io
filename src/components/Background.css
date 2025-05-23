@@ -16,13 +16,13 @@
   background-repeat: repeat;
   mix-blend-mode: screen;
 
-  z-index: -50;
+  z-index: -85;
   opacity: 1.2;
 }
 
 .background::before {
   background-image: url("../assets/tile.jpg");
 
-  z-index: -99; /* Push behind body content */
+  z-index: -98; /* Push behind everything */
   opacity: 0.1;
 }
