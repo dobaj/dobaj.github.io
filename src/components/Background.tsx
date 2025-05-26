@@ -60,8 +60,8 @@ export const Background = ({ children }: { children: ReactNode }) => {
       ref.current.x = x;
       ref.current.y = y;
 
-      objectRef.current.style.setProperty("--bg-x", `${x}px`);
-      objectRef.current.style.setProperty("--bg-y", `${y}px`);
+      objectRef.current.style.setProperty("--bg-x", `${x.toFixed(3)}px`);
+      objectRef.current.style.setProperty("--bg-y", `${y.toFixed(3)}px`);
     }
   };
 
