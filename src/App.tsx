@@ -1,4 +1,6 @@
 import me from "./assets/me.jpg";
+import github from "./assets/github.svg";
+import linkedIn from "./assets/linkedin.svg";
 import "./App.css";
 import { Background } from "./components/Background";
 import { useEffect } from "react";
@@ -26,7 +28,6 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -81,8 +82,28 @@ function App() {
             })}
           </span>
         </h1>
+
         <h3>Welcome to my page!</h3>
-        <img src={me}></img>
+        <div className="socialRow">
+          <a
+            href="https://github.com/dobaj"
+            target="_blank"
+            className="socialLink"
+          >
+            <img className="socialIcon" src={github} />
+            <img className="socialIcon blur" src={github} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mattdobaj/"
+            className="socialLink"
+            target="_blank"
+          >
+            <img className="socialIcon" src={linkedIn} />
+            <img className="socialIcon blur" src={linkedIn} />
+          </a>
+        </div>
+
+        <img className="profilePhoto" src={me}></img>
         <h3>content</h3>
         <h3>content</h3>
         <h3>content</h3>
