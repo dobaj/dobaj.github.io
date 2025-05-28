@@ -78,8 +78,7 @@ main {
   width: 40ch;
 }
 
-.socialRow,
-a {
+.socialRow a {
   position: relative;
   height: 2.5em;
   padding-bottom: 1em;
@@ -101,7 +100,7 @@ a {
   filter: blur(10px);
   transform: scale(0.95);
   box-shadow: 0px 0px 12px 4px white;
-  transition: filter 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+  transition: filter 0.2s ease, transform 0.25s ease, box-shadow 0.3s ease;
 }
 
 .socialIcon.blur:hover {
@@ -157,33 +156,13 @@ hr {
   border: 0.15em solid white;
 }
 
-.project {
-  padding-left: 8em;
-  width: 100%;
-}
-
-.photos {
-  display: flex;
-  justify-content: space-between;
-}
-
-.photos img {
-  width: 450px;
-  border-radius: 1em;
-}
-
-.technologies {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.technologies img {
-  max-height: 4em;
-  flex-grow: 1;
-}
-
 em {
-  text-shadow: 0px 1px 14px white, 0px -1px 14px white;
+  font-weight: 600;
+  color: #fff;
   font-style: inherit;
+  text-shadow: 0px 0px 2em white;
+}
+
+.dimText {
+  color: #eee;
 }
