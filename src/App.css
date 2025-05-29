@@ -134,14 +134,16 @@ main {
 
 .indent,
 .projectHeader {
-  padding-left: 4em;
+  padding-left: 2em;
 }
 
 .projectHeader {
   display: flex;
   align-items: center;
   height: 4em;
+  padding-bottom: 0.5em;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .projectHeader img {
@@ -165,4 +167,17 @@ em {
 
 .dimText {
   color: #eee;
+}
+
+.hide {
+  --reveal-time: 0.3s;
+  height: 0;
+  transition: height var(--reveal-time) cubic-bezier(0.4, 0, 1, 1);
+  overflow: hidden;
+  padding-bottom: 1em;
+}
+
+.hide.reveal {
+  height: 100%;
+  padding-bottom: 0em;
 }

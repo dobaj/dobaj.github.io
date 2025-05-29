@@ -22,19 +22,25 @@ export const Project = ({
         </a>
       )}
       <div className="indent">
-        <div className="photos">
-          {photos.map(([imgSrc, imgAlt], i) => (
-            <img key={i} src={imgSrc} alt={imgAlt} />
-          ))}
-        </div>
+        {photos.length > 0 && (
+          <div className="photos">
+            {photos.map(([imgSrc, imgAlt], i) => (
+              <img key={i} src={imgSrc} alt={imgAlt} />
+            ))}
+          </div>
+        )}
         <h3>Description</h3>
         <div className="dimText">{description}</div>
-        <h3>Technologies</h3>
-        <div className="technologies">
-          {technologies.map(([imgSrc, imgAlt], i) => (
-            <img key={i} src={imgSrc} alt={imgAlt} title={imgAlt} />
-          ))}
-        </div>
+        {technologies.length > 0 && (
+          <>
+            <h3>Technologies</h3>
+            <div className="technologies">
+              {technologies.map(([imgSrc, imgAlt], i) => (
+                <img key={i} src={imgSrc} alt={imgAlt} title={imgAlt} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

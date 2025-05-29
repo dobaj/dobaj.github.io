@@ -24,7 +24,7 @@ import wordpressIcon from "./assets/wordpress.svg";
 
 import "./App.css";
 import { Background } from "./components/Background";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { createHandleScroll, scrollToId } from "./components/ScrollEffects";
 import { Project } from "./components/Project";
 
@@ -34,6 +34,9 @@ function App() {
   const NoProgress = "#bbbbbba0";
   const Progress = "#ffffffff";
   const progressLength = 5;
+
+  const [showCAC, setShowCAC] = useState<boolean>(false);
+  const [showFreelance, setShowFreelance] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = createHandleScroll(
@@ -134,173 +137,200 @@ function App() {
             <h1>Projects</h1>
 
             <div id="CAC Projects" className="flexCol">
-              <div className="projectHeader">
+              <a
+                className="projectHeader"
+                onClick={() => {
+                  setShowCAC((prev) => !prev);
+                }}
+              >
                 <img src={queensCAC} />
                 <hr />
+
                 <h2>Queen's Centre for Advanced Computing</h2>
+              </a>
+
+              <div
+                className={showCAC ? "hide reveal" : "hide"}
+                style={{ "--reveal-time": "0.5s" } as React.CSSProperties}
+              >
+                <Project
+                  title="ArcheOptix"
+                  photos={[]}
+                  technologies={[]}
+                  description={
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Praesent dictum vulputate erat in placerat. Mauris quis
+                      porta sem. Sed et tincidunt orci, sed fermentum sapien.
+                      Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
+                      bibendum. Mauris euismod rutrum ipsum ut malesuada.
+                      Vestibulum quis diam fermentum, sollicitudin mi quis,
+                      condimentum ipsum. Ut blandit hendrerit nulla, ac
+                      condimentum quam convallis vitae. Proin elementum sem id
+                      sem commodo, ut rutrum quam faucibus. Suspendisse leo sem,
+                      sodales vel eleifend ut, consequat sit amet nisi.
+                      Curabitur sem nibh, rhoncus fringilla risus et, dictum
+                      aliquet neque. Nulla tempus lacus vel blandit lobortis.
+                    </p>
+                  }
+                />
+
+                <Project
+                  title="Queen's Vice-Principal Research Dashboard"
+                  photos={[
+                    [
+                      khsc1,
+                      "Screenshot showing KHSC, a public site using the same codebase as VPR.",
+                    ],
+                    [
+                      khsc2,
+                      "Screenshot showing KHSC's Report Preview feature.",
+                    ],
+                  ]}
+                  technologies={[
+                    [reactIcon, "React icon"],
+                    [expressIcon, "Express icon"],
+                    [mongoIcon, "Mongo icon"],
+                  ]}
+                  description={
+                    <p>
+                      Developed new features for an internal Queen's
+                      Vice-Principal Research (VPR) dashboard to track various
+                      HR and funding metrics. Implemented{" "}
+                      <em>Microsoft Single Sign On (SSO)</em> login for
+                      integration with Queen's services. Reworked automatic
+                      report generation, which displays relevant filtered data
+                      in a stylized PDF format. Updated the project from Create
+                      React App to Webpack and added various security headers
+                      such as a Content Security Policy (CSP). Created common
+                      filtering elements to be used across a variety of data
+                      sets/types. Screenshots are from KHSC, a public site that
+                      shares the same codebase.
+                    </p>
+                  }
+                />
+
+                <Project
+                  title={["Kingston In Focus", "https://kingstoninfocus.ca/"]}
+                  photos={[
+                    [
+                      kif1,
+                      "Screenshot showing the Kingston in Focus Dashboard's Local Economy page.",
+                    ],
+                    [
+                      kif2,
+                      "Screenshot showing the Kingston in Focus Dashboard's Employment and Education page.",
+                    ],
+                  ]}
+                  technologies={[
+                    [reactIcon, "React icon"],
+                    [djangoIcon, "django icon"],
+                  ]}
+                  description={
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Praesent dictum vulputate erat in placerat. Mauris quis
+                      porta sem. Sed et tincidunt orci, sed fermentum sapien.
+                      Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
+                      bibendum. Mauris euismod rutrum ipsum ut malesuada.
+                      Vestibulum quis diam fermentum, sollicitudin mi quis,
+                      condimentum ipsum. Ut blandit hendrerit nulla, ac
+                      condimentum quam convallis vitae. Proin elementum sem id
+                      sem commodo, ut rutrum quam faucibus. Suspendisse leo sem,
+                      sodales vel eleifend ut, consequat sit amet nisi.
+                      Curabitur sem nibh, rhoncus fringilla risus et, dictum
+                      aliquet neque. Nulla tempus lacus vel blandit lobortis.
+                      Maecenas accumsan cursus urna, ac cursus ipsum maximus
+                      eget. Mauris massa mi, commodo eu aliquet pretium, sodales
+                      viverra erat.
+                    </p>
+                  }
+                />
+
+                <Project
+                  title={[
+                    "Queen's Vice Principal Research Funding Dashboard",
+                    "https://www.queensu.ca/vpr/funding/search/",
+                  ]}
+                  photos={[
+                    [kvpr1, "Screenshot showing the VPR Funding Dashboard."],
+                    [
+                      kvpr2,
+                      "Screenshot showing information for a funding opportunity.",
+                    ],
+                  ]}
+                  technologies={[[wordpressIcon, "Wordpress icon"]]}
+                  description={
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Praesent dictum vulputate erat in placerat. Mauris quis
+                      porta sem. Sed et tincidunt orci, sed fermentum sapien.
+                      Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
+                      bibendum. Mauris euismod rutrum ipsum ut malesuada.
+                      Vestibulum quis diam fermentum, sollicitudin mi quis,
+                      condimentum ipsum. Ut blandit hendrerit nulla, ac
+                      condimentum quam convallis vitae. Proin elementum sem id
+                      sem commodo, ut rutrum quam faucibus. Suspendisse leo sem,
+                      sodales vel eleifend ut, consequat sit amet nisi.
+                      Curabitur sem nibh, rhoncus fringilla risus et, dictum
+                      aliquet neque. Nulla tempus lacus vel blandit lobortis.
+                      Maecenas accumsan cursus urna, ac cursus ipsum maximus
+                      eget. Mauris massa mi, commodo eu aliquet pretium, sodales
+                      viverra erat.
+                    </p>
+                  }
+                />
               </div>
-
-              <Project
-                title="ArcheOptix"
-                photos={[]}
-                technologies={[]}
-                description={
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent dictum vulputate erat in placerat. Mauris quis
-                    porta sem. Sed et tincidunt orci, sed fermentum sapien.
-                    Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
-                    bibendum. Mauris euismod rutrum ipsum ut malesuada.
-                    Vestibulum quis diam fermentum, sollicitudin mi quis,
-                    condimentum ipsum. Ut blandit hendrerit nulla, ac
-                    condimentum quam convallis vitae. Proin elementum sem id sem
-                    commodo, ut rutrum quam faucibus. Suspendisse leo sem,
-                    sodales vel eleifend ut, consequat sit amet nisi. Curabitur
-                    sem nibh, rhoncus fringilla risus et, dictum aliquet neque.
-                    Nulla tempus lacus vel blandit lobortis.
-                  </p>
-                }
-              />
-
-              <Project
-                title="Queen's Vice-Principal Research Dashboard"
-                photos={[
-                  [
-                    khsc1,
-                    "Screenshot showing KHSC, a public site using the same codebase as VPR.",
-                  ],
-                  [khsc2, "Screenshot showing KHSC's Report Preview feature."],
-                ]}
-                technologies={[
-                  [reactIcon, "React icon"],
-                  [expressIcon, "Express icon"],
-                  [mongoIcon, "Mongo icon"],
-                ]}
-                description={
-                  <p>
-                    Developed new features for an internal Queen's
-                    Vice-Principal Research (VPR) dashboard to track various HR
-                    and funding metrics. Implemented{" "}
-                    <em>Microsoft Single Sign On (SSO)</em> login for
-                    integration with Queen's services. Reworked automatic report
-                    generation, which displays relevant filtered data in a
-                    stylized PDF format. Updated the project from Create React
-                    App to Webpack and added various security headers such as a
-                    Content Security Policy (CSP). Created common filtering
-                    elements to be used across a variety of data sets/types.
-                    Screenshots are from KHSC, a public site that shares the
-                    same codebase.
-                  </p>
-                }
-              />
-
-              <Project
-                title={["Kingston In Focus", "https://kingstoninfocus.ca/"]}
-                photos={[
-                  [
-                    kif1,
-                    "Screenshot showing the Kingston in Focus Dashboard's Local Economy page.",
-                  ],
-                  [
-                    kif2,
-                    "Screenshot showing the Kingston in Focus Dashboard's Employment and Education page.",
-                  ],
-                ]}
-                technologies={[
-                  [reactIcon, "React icon"],
-                  [djangoIcon, "django icon"],
-                ]}
-                description={
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent dictum vulputate erat in placerat. Mauris quis
-                    porta sem. Sed et tincidunt orci, sed fermentum sapien.
-                    Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
-                    bibendum. Mauris euismod rutrum ipsum ut malesuada.
-                    Vestibulum quis diam fermentum, sollicitudin mi quis,
-                    condimentum ipsum. Ut blandit hendrerit nulla, ac
-                    condimentum quam convallis vitae. Proin elementum sem id sem
-                    commodo, ut rutrum quam faucibus. Suspendisse leo sem,
-                    sodales vel eleifend ut, consequat sit amet nisi. Curabitur
-                    sem nibh, rhoncus fringilla risus et, dictum aliquet neque.
-                    Nulla tempus lacus vel blandit lobortis. Maecenas accumsan
-                    cursus urna, ac cursus ipsum maximus eget. Mauris massa mi,
-                    commodo eu aliquet pretium, sodales viverra erat.
-                  </p>
-                }
-              />
-
-              <Project
-                title={[
-                  "Queen's Vice Principal Research Funding Dashboard",
-                  "https://www.queensu.ca/vpr/funding/search/",
-                ]}
-                photos={[
-                  [kvpr1, "Screenshot showing the VPR Funding Dashboard."],
-                  [
-                    kvpr2,
-                    "Screenshot showing information for a funding opportunity.",
-                  ],
-                ]}
-                technologies={[[wordpressIcon, "Wordpress icon"]]}
-                description={
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent dictum vulputate erat in placerat. Mauris quis
-                    porta sem. Sed et tincidunt orci, sed fermentum sapien.
-                    Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
-                    bibendum. Mauris euismod rutrum ipsum ut malesuada.
-                    Vestibulum quis diam fermentum, sollicitudin mi quis,
-                    condimentum ipsum. Ut blandit hendrerit nulla, ac
-                    condimentum quam convallis vitae. Proin elementum sem id sem
-                    commodo, ut rutrum quam faucibus. Suspendisse leo sem,
-                    sodales vel eleifend ut, consequat sit amet nisi. Curabitur
-                    sem nibh, rhoncus fringilla risus et, dictum aliquet neque.
-                    Nulla tempus lacus vel blandit lobortis. Maecenas accumsan
-                    cursus urna, ac cursus ipsum maximus eget. Mauris massa mi,
-                    commodo eu aliquet pretium, sodales viverra erat.
-                  </p>
-                }
-              />
             </div>
 
             <div id="Freelance" className="flexCol">
               <div className="projectHeader">
                 <img src={freelance} />
                 <hr />
-                <h2>Freelance</h2>
+                <a
+                  onClick={() => {
+                    setShowFreelance((prev) => !prev);
+                  }}
+                >
+                  <h2>Freelance</h2>
+                </a>
               </div>
 
-              <Project
-                title={[
-                  "Butler Tree Service",
-                  "https://www.butlertreeserviceltd.com/",
-                ]}
-                photos={[
-                  [
-                    khsc1,
-                    "Screenshot showing KHSC, a public site using the same codebase as VPR.",
-                  ],
-                  [khsc2, "Screenshot showing KHSC's Report Preview feature."],
-                ]}
-                technologies={[[wordpressIcon, "Wordpress icon"]]}
-                description={
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent dictum vulputate erat in placerat. Mauris quis
-                    porta sem. Sed et tincidunt orci, sed fermentum sapien.
-                    Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
-                    bibendum. Mauris euismod rutrum ipsum ut malesuada.
-                    Vestibulum quis diam fermentum, sollicitudin mi quis,
-                    condimentum ipsum. Ut blandit hendrerit nulla, ac
-                    condimentum quam convallis vitae. Proin elementum sem id sem
-                    commodo, ut rutrum quam faucibus. Suspendisse leo sem,
-                    sodales vel eleifend ut, consequat sit amet nisi. Curabitur
-                    sem nibh, rhoncus fringilla risus et, dictum aliquet neque.
-                    Nulla tempus lacus vel blandit lobortis.
-                  </p>
-                }
-              />
+              <div className={showFreelance ? "hide reveal" : "hide"}>
+                <Project
+                  title={[
+                    "Butler Tree Service",
+                    "https://www.butlertreeserviceltd.com/",
+                  ]}
+                  photos={[
+                    [
+                      khsc1,
+                      "Screenshot showing KHSC, a public site using the same codebase as VPR.",
+                    ],
+                    [
+                      khsc2,
+                      "Screenshot showing KHSC's Report Preview feature.",
+                    ],
+                  ]}
+                  technologies={[[wordpressIcon, "Wordpress icon"]]}
+                  description={
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Praesent dictum vulputate erat in placerat. Mauris quis
+                      porta sem. Sed et tincidunt orci, sed fermentum sapien.
+                      Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
+                      bibendum. Mauris euismod rutrum ipsum ut malesuada.
+                      Vestibulum quis diam fermentum, sollicitudin mi quis,
+                      condimentum ipsum. Ut blandit hendrerit nulla, ac
+                      condimentum quam convallis vitae. Proin elementum sem id
+                      sem commodo, ut rutrum quam faucibus. Suspendisse leo sem,
+                      sodales vel eleifend ut, consequat sit amet nisi.
+                      Curabitur sem nibh, rhoncus fringilla risus et, dictum
+                      aliquet neque. Nulla tempus lacus vel blandit lobortis.
+                    </p>
+                  }
+                />
+              </div>
             </div>
           </div>
 
