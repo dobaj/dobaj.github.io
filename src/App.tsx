@@ -4,23 +4,27 @@ import github from "./assets/github.svg";
 import linkedIn from "./assets/linkedin.svg";
 
 // Companies(ish) Logos
-import queensCAC from "./assets/queensCAC.png";
-import freelance from "./assets/construction.svg";
+import queensCAC from "./assets/projects/logos/queensCAC.png";
+import freelance from "./assets/projects/logos/construction.svg";
 
 // Project Photos
-import khsc1 from "./assets/khsc1.jpg";
-import khsc2 from "./assets/khsc2.jpg";
-import kif1 from "./assets/kif1.jpg";
-import kif2 from "./assets/kif2.jpg";
-import kvpr1 from "./assets/kvpr1.jpg";
-import kvpr2 from "./assets/kvpr2.jpg";
+import khsc1 from "./assets/projects/khsc1.jpg";
+import khsc2 from "./assets/projects/khsc2.jpg";
+import kif1 from "./assets/projects/kif1.jpg";
+import kif2 from "./assets/projects/kif2.jpg";
+import kvpr1 from "./assets/projects/kvpr1.jpg";
+import kvpr2 from "./assets/projects/kvpr2.jpg";
+import bts1 from "./assets/projects/bts1.jpg";
+import bts2 from "./assets/projects/bts2.jpg";
 
 // Technologies Photos
-import reactIcon from "./assets/react.svg";
-import expressIcon from "./assets/express.svg";
-import mongoIcon from "./assets/mongodb.svg";
-import djangoIcon from "./assets/django.svg";
-import wordpressIcon from "./assets/wordpress.svg";
+import reactIcon from "./assets/technologies/react.svg";
+import expressIcon from "./assets/technologies/express.svg";
+import mongoIcon from "./assets/technologies/mongodb.svg";
+import djangoIcon from "./assets/technologies/django.svg";
+import wordpressIcon from "./assets/technologies/wordpress.svg";
+import cpp from "./assets/technologies/c++.svg";
+import opengl from "./assets/technologies/opengl.svg";
 
 import "./App.css";
 import { Background } from "./components/Background";
@@ -156,21 +160,26 @@ function App() {
                 <Project
                   title="ArcheOptix"
                   photos={[]}
-                  technologies={[]}
+                  technologies={[
+                    [cpp, "C++ logo"],
+                    [opengl, "OpenGL logo"],
+                  ]}
                   description={
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Praesent dictum vulputate erat in placerat. Mauris quis
-                      porta sem. Sed et tincidunt orci, sed fermentum sapien.
-                      Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
-                      bibendum. Mauris euismod rutrum ipsum ut malesuada.
-                      Vestibulum quis diam fermentum, sollicitudin mi quis,
-                      condimentum ipsum. Ut blandit hendrerit nulla, ac
-                      condimentum quam convallis vitae. Proin elementum sem id
-                      sem commodo, ut rutrum quam faucibus. Suspendisse leo sem,
-                      sodales vel eleifend ut, consequat sit amet nisi.
-                      Curabitur sem nibh, rhoncus fringilla risus et, dictum
-                      aliquet neque. Nulla tempus lacus vel blandit lobortis.
+                      I extended a NanoGUI-based frontend for a medical
+                      brain-bleed scanning device. To allow for reliable support
+                      across multiple development environments, I created a
+                      CMake build process. The software guides users through the
+                      head scanning process and points out potential real-time
+                      scanning issues. I used a custom OpenGL-based renderer to
+                      visualize the head scanning process and externally
+                      detected brain-bleeds on a 3D head model complete with
+                      animations to show errors. To separate hardware
+                      communication from the frontend and improve stability and
+                      responsiveness, I implemented multithreading as well. I
+                      worked closely with the client and guided them through set
+                      up, live demos, and explored potential project extensions
+                      with them.
                     </p>
                   }
                 />
@@ -190,19 +199,20 @@ function App() {
                   technologies={[
                     [reactIcon, "React icon"],
                     [expressIcon, "Express icon"],
-                    [mongoIcon, "Mongo icon"],
+                    [mongoIcon, "MongoDB icon"],
                   ]}
                   description={
                     <p>
-                      Developed new features for an internal Queen's
+                      I developed new features for an internal Queen's
                       Vice-Principal Research (VPR) dashboard to track various
-                      HR and funding metrics. Implemented{" "}
-                      <em>Microsoft Single Sign On (SSO)</em> login for
-                      integration with Queen's services. Reworked automatic
-                      report generation, which displays relevant filtered data
-                      in a stylized PDF format. Updated the project from Create
-                      React App to Webpack and added various security headers
-                      such as a Content Security Policy (CSP). Created common
+                      HR and funding metrics. For integration with Queen's
+                      services, I implemented{" "}
+                      <em>Microsoft Single Sign On (SSO)</em>. I also reworked
+                      automatic report generation, which displays relevant
+                      filtered data in a stylized PDF format. To modernize the
+                      project, I updated the build process from Create React App
+                      to Webpack and added various security headers such as a
+                      Content Security Policy (CSP). I also created common
                       filtering elements to be used across a variety of data
                       sets/types. Screenshots are from KHSC, a public site that
                       shares the same codebase.
@@ -224,30 +234,24 @@ function App() {
                   ]}
                   technologies={[
                     [reactIcon, "React icon"],
-                    [djangoIcon, "django icon"],
+                    [djangoIcon, "Django icon"],
                   ]}
                   description={
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Praesent dictum vulputate erat in placerat. Mauris quis
-                      porta sem. Sed et tincidunt orci, sed fermentum sapien.
-                      Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
-                      bibendum. Mauris euismod rutrum ipsum ut malesuada.
-                      Vestibulum quis diam fermentum, sollicitudin mi quis,
-                      condimentum ipsum. Ut blandit hendrerit nulla, ac
-                      condimentum quam convallis vitae. Proin elementum sem id
-                      sem commodo, ut rutrum quam faucibus. Suspendisse leo sem,
-                      sodales vel eleifend ut, consequat sit amet nisi.
-                      Curabitur sem nibh, rhoncus fringilla risus et, dictum
-                      aliquet neque. Nulla tempus lacus vel blandit lobortis.
-                      Maecenas accumsan cursus urna, ac cursus ipsum maximus
-                      eget. Mauris massa mi, commodo eu aliquet pretium, sodales
-                      viverra erat.
+                      I added a variety of new data visualization charts to the
+                      site using data from the City of Kingston, Statistics
+                      Canada, and the Government of Ontario. To facilitate data
+                      visualization for very large datasets, I modified how
+                      Statistics Canada data is obtained by filtering before
+                      data collection. To modernize the project, I updated the
+                      build process from Create React App to Webpack. I
+                      refactored the codebase to use common filtering elements
+                      to reduce duplicated code.
                     </p>
                   }
                 />
 
-                <Project
+                {/* <Project
                   title={[
                     "Queen's Vice Principal Research Funding Dashboard",
                     "https://www.queensu.ca/vpr/funding/search/",
@@ -279,7 +283,7 @@ function App() {
                       viverra erat.
                     </p>
                   }
-                />
+                /> */}
               </div>
             </div>
 
@@ -304,29 +308,20 @@ function App() {
                   ]}
                   photos={[
                     [
-                      khsc1,
-                      "Screenshot showing KHSC, a public site using the same codebase as VPR.",
+                      bts1,
+                      "Screenshot showing the Butler Tree Service home page.",
                     ],
                     [
-                      khsc2,
-                      "Screenshot showing KHSC's Report Preview feature.",
+                      bts2,
+                      "Screenshot showing the Butler Tree Service services page.",
                     ],
                   ]}
                   technologies={[[wordpressIcon, "Wordpress icon"]]}
                   description={
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Praesent dictum vulputate erat in placerat. Mauris quis
-                      porta sem. Sed et tincidunt orci, sed fermentum sapien.
-                      Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
-                      bibendum. Mauris euismod rutrum ipsum ut malesuada.
-                      Vestibulum quis diam fermentum, sollicitudin mi quis,
-                      condimentum ipsum. Ut blandit hendrerit nulla, ac
-                      condimentum quam convallis vitae. Proin elementum sem id
-                      sem commodo, ut rutrum quam faucibus. Suspendisse leo sem,
-                      sodales vel eleifend ut, consequat sit amet nisi.
-                      Curabitur sem nibh, rhoncus fringilla risus et, dictum
-                      aliquet neque. Nulla tempus lacus vel blandit lobortis.
+                      Created a custom WordPress site for a client featuring a
+                      small gallery of their work, a page describing their
+                      services, and a contact form for booking services.
                     </p>
                   }
                 />
