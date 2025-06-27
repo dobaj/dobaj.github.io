@@ -16,7 +16,8 @@
 }
 
 h1 {
-  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", "ChalkboardSE-Regular", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard",
+    "ChalkboardSE-Regular", cursive;
 }
 
 h2 {
@@ -25,7 +26,8 @@ h2 {
 }
 
 li a {
-  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", "ChalkboardSE-Regular", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard",
+    "ChalkboardSE-Regular", cursive;
   font-size: large;
 }
 

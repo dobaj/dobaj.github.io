@@ -266,7 +266,10 @@ function App() {
                   technologies={[[wordpressIcon, "Wordpress icon"]]}
                   description={
                     <p>
-                      I maintained the site by providing support, fixing bugs, and adding new filtering features. To improve quality of life, I added date-validity checking and improved printing functionality on the site's admin panel.
+                      I maintained the site by providing support, fixing bugs,
+                      and adding new filtering features. To improve quality of
+                      life, I added date-validity checking and improved printing
+                      functionality on the site's admin panel.
                     </p>
                   }
                 />
