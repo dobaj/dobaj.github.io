@@ -113,7 +113,7 @@ function App() {
             </span>
           </h1>
 
-          <h3>Welcome to my page!</h3>
+          <h3>Welcome to my portfolio!</h3>
           <div className="socialRow">
             <a
               href="https://github.com/dobaj"
@@ -135,7 +135,7 @@ function App() {
 
           <img className="profilePhoto" src={me}></img>
 
-          <p>I'm a full-stack developer. blah blah blah other stuff</p>
+          {/* <p>I'm a full-stack developer. blah blah blah other stuff</p> */}
 
           <div id="projects" className="flexCol">
             <h1>Projects</h1>
