@@ -1,7 +1,35 @@
 #root {
-  max-width: 110em;
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.actualRoot {
+  max-width: 100em;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  max-width: 1000px;
+  padding-left: 4em;
+  padding-right: 4em;
+  box-sizing: border-box;
+  justify-self: center;
+  flex: 1 1 0;
+}
+
+.flexCol,
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100%; */
+}
+
+.flexCol h1 {
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  align-self: flex-start;
 }
 
 .profilePhoto {
@@ -13,24 +41,14 @@
   padding: 2em;
 }
 
-.actualRoot {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
 
-nav {
+nav, .dummy {
   position: sticky;
   padding-left: 0.5vw;
   padding-top: 1em;
   top: 0;
   width: 15ch;
   align-self: flex-start;
-}
-
-.dummy {
-  width: 15ch;
-  padding-right: 1vw;
 }
 
 .dot {
@@ -49,27 +67,6 @@ nav {
   padding-bottom: 1.5em;
 }
 
-main {
-  max-width: 1000px;
-  padding-left: 4em;
-  padding-right: 4em;
-  justify-self: center;
-}
-
-.flexCol,
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.flexCol h1 {
-  padding-top: 2em;
-  padding-bottom: 0.5em;
-  align-self: flex-start;
-}
-
 /* Social icons */
 
 .socialRow {
@@ -81,6 +78,7 @@ main {
 .socialRow a {
   position: relative;
   height: 2.5em;
+  width: 2.5em;
   padding-bottom: 1em;
 }
 
@@ -180,4 +178,25 @@ em {
 .hide.reveal {
   height: 100%;
   padding-bottom: 0em;
+}
+
+@media screen and (max-width: 80rem) {
+  nav, .dummy {
+    display: none;
+  }
+
+  .actualRoot {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .socialRow {
+    width: 80%;
+  }
 }
