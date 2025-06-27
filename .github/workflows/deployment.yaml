@@ -14,6 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Set Node.js
         uses: actions/setup-node@v3
         with:
@@ -21,9 +24,7 @@ jobs:
           cache: 'yarn'
 
       - name: Load dependancies
-        run: |
-          corepack enable
-          yarn install
+        run: yarn install
 
       - name: Deploy with gh-pages
         run: |
