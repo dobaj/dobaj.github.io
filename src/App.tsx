@@ -251,7 +251,7 @@ function App() {
                   }
                 />
 
-                {/* <Project
+                <Project
                   title={[
                     "Queen's Vice Principal Research Funding Dashboard",
                     "https://www.queensu.ca/vpr/funding/search/",
@@ -266,24 +266,10 @@ function App() {
                   technologies={[[wordpressIcon, "Wordpress icon"]]}
                   description={
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Praesent dictum vulputate erat in placerat. Mauris quis
-                      porta sem. Sed et tincidunt orci, sed fermentum sapien.
-                      Etiam tincidunt mauris ac nibh pretium, ut dignissim urna
-                      bibendum. Mauris euismod rutrum ipsum ut malesuada.
-                      Vestibulum quis diam fermentum, sollicitudin mi quis,
-                      condimentum ipsum. Ut blandit hendrerit nulla, ac
-                      condimentum quam convallis vitae. Proin elementum sem id
-                      sem commodo, ut rutrum quam faucibus. Suspendisse leo sem,
-                      sodales vel eleifend ut, consequat sit amet nisi.
-                      Curabitur sem nibh, rhoncus fringilla risus et, dictum
-                      aliquet neque. Nulla tempus lacus vel blandit lobortis.
-                      Maecenas accumsan cursus urna, ac cursus ipsum maximus
-                      eget. Mauris massa mi, commodo eu aliquet pretium, sodales
-                      viverra erat.
+                      I maintained the site by providing support, fixing bugs, and adding new filtering features. To improve quality of life, I added date-validity checking and improved printing functionality on the site's admin panel.
                     </p>
                   }
-                /> */}
+                />
               </div>
             </div>
 

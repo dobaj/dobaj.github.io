@@ -1,5 +1,5 @@
 #root {
-  max-width: 100em;
+  max-width: 110em;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -21,7 +21,7 @@
 
 nav {
   position: sticky;
-  padding-left: 1vw;
+  padding-left: 0.5vw;
   padding-top: 1em;
   top: 0;
   width: 15ch;

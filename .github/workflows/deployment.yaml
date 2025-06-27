@@ -23,7 +23,7 @@ jobs:
           node-version: lts/*
           cache: 'yarn'
 
-      - name: Load dependancies
+      - name: Install dependancies
         run: yarn install
 
       - name: Deploy with gh-pages
