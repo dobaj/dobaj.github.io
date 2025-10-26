@@ -3,6 +3,9 @@ import me from "./assets/me.jpg";
 import github from "./assets/github.svg";
 import linkedIn from "./assets/linkedin.svg";
 
+import collapseIcon from "./assets/icons/material remove.svg";
+import expandIcon from "./assets/icons/material add.svg";
+
 // Companies(ish) Logos
 import queensCAC from "./assets/projects/logos/queensCAC.png";
 import freelance from "./assets/projects/logos/construction.svg";
@@ -123,16 +126,16 @@ function App() {
               target="_blank"
               className="socialLink"
             >
+              {/* <img className="socialIcon blur" src={github} /> */}
               <img className="socialIcon" src={github} />
-              <img className="socialIcon blur" src={github} />
             </a>
             <a
               href="https://www.linkedin.com/in/mattdobaj/"
               className="socialLink"
               target="_blank"
             >
+              {/* <img className="socialIcon blur" src={linkedIn} /> */}
               <img className="socialIcon" src={linkedIn} />
-              <img className="socialIcon blur" src={linkedIn} />
             </a>
           </div>
 
@@ -151,9 +154,16 @@ function App() {
                 }}
               >
                 <img src={queensCAC} />
-                <hr />
 
                 <h2>Queen's Centre for Advanced Computing</h2>
+
+                <div className="collapse">
+                  {showCAC ? (
+                    <img src={collapseIcon} />
+                  ) : (
+                    <img src={expandIcon} />
+                  )}
+                </div>
               </a>
 
               <div
@@ -283,17 +293,24 @@ function App() {
             </div>
 
             <div id="Freelance" className="flexCol">
-              <div className="header">
+              <a
+                className="header"
+                onClick={() => {
+                  setShowFreelance((prev) => !prev);
+                }}
+              >
                 <img src={freelance} />
-                <hr />
-                <a
-                  onClick={() => {
-                    setShowFreelance((prev) => !prev);
-                  }}
-                >
-                  <h2>Freelance</h2>
-                </a>
-              </div>
+
+                <h2>Freelance</h2>
+
+                <div className="collapse">
+                  {showFreelance ? (
+                    <img src={collapseIcon} />
+                  ) : (
+                    <img src={expandIcon} />
+                  )}
+                </div>
+              </a>
 
               <div className={showFreelance ? "hide reveal" : "hide"}>
                 <Project
