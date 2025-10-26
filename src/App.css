@@ -13,9 +13,15 @@ main {
   max-width: 1000px;
   padding-left: 4em;
   padding-right: 4em;
+  padding-top: 1em;
+  padding-bottom: 4em;
   box-sizing: border-box;
   justify-self: center;
   flex: 1 1 0;
+}
+
+main > h1, main > h3{
+  margin-bottom: 0;
 }
 
 .flexCol,
@@ -69,19 +75,114 @@ nav,
   padding-bottom: 1.5em;
 }
 
+hr {
+  width: 3ch;
+  margin-left: 5ch;
+  margin-right: 5ch;
+  border-radius: 1em;
+  border: 0.15em solid white;
+}
+
+/* Headers */
+
+.indent,
+.header {
+  padding-left: 2em;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 4em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header img {
+  height: 100%;
+}
+
+.header h2 {
+  font-size: 1.75em;
+  font-weight: 725;
+}
+
+
+.experienceHeader {
+  margin-bottom: 0;
+  justify-content: space-between;
+  height: 3em;
+}
+
+.experienceHeader h2 {
+  font-size: 1.75em;
+  font-weight: 725;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.experienceHeader div {
+  display: flex;
+  align-items: center;
+}
+
+.experienceHeader hr {
+  width: 2ch;
+  margin-left: 2ch;
+  margin-right: 2ch;
+}
+
+.subHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  padding-left: 2em;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.subHeader h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.experienceText {
+  margin-block-start: 0em;
+  margin-block-end: 2em;
+  padding-left: 4em;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 30rem) {
+  .header hr,
+  .header img {
+    display: none;
+  }
+  .indent,
+  .header {
+    padding-left: 0em;
+  }
+
+  .flexCol h1 {
+    padding-left: 1rem;
+  }
+}
+
 /* Social icons */
 
 .socialRow {
   display: flex;
   justify-content: space-between;
   width: 40ch;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .socialRow a {
   position: relative;
   height: 2.5em;
   width: 2.5em;
-  padding-bottom: 1em;
 }
 
 .socialIcon {
@@ -182,5 +283,11 @@ em {
     padding-left: 2rem;
     padding-right: 2rem;
     box-sizing: border-box;
+  }
+  
+  hr {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 2ch;
   }
 }

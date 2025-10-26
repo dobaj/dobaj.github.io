@@ -87,7 +87,7 @@ function App() {
         </nav>
 
         <main>
-          <h1 aria-label={name}>
+          <h1 className="title" aria-label={name}>
             <span aria-hidden="true">
               {Array.from(name).map((letter, index) => {
                 let rotation = 6;
@@ -113,7 +113,10 @@ function App() {
             </span>
           </h1>
 
-          <h3>Welcome to my portfolio!</h3>
+          <h3 className="title">
+            Full Stack Developer and Computing Student at Queen's University
+          </h3>
+
           <div className="socialRow">
             <a
               href="https://github.com/dobaj"
@@ -142,7 +145,7 @@ function App() {
 
             <div id="CAC Projects" className="flexCol">
               <a
-                className="projectHeader"
+                className="header"
                 onClick={() => {
                   setShowCAC((prev) => !prev);
                 }}
@@ -172,14 +175,14 @@ function App() {
                       CMake build process. The software guides users through the
                       head scanning process and points out potential real-time
                       scanning issues. I used a custom OpenGL-based renderer to
-                      visualize the head scanning process and externally
-                      detected brain-bleeds on a 3D head model complete with
-                      animations to show errors. To separate hardware
-                      communication from the frontend and improve stability and
-                      responsiveness, I implemented multithreading as well. I
-                      worked closely with the client and guided them through set
-                      up, live demos, and explored potential project extensions
-                      with them.
+                      visualize the head scanning process and
+                      externally-detected brain-bleeds on a 3D head model
+                      complete with animations to show errors. To separate
+                      hardware communication from the frontend and improve
+                      stability and responsiveness, I implemented multithreading
+                      as well. I worked closely with the client and guided them
+                      through set up, live demos, and explored potential project
+                      extensions with them.
                     </p>
                   }
                 />
@@ -241,12 +244,15 @@ function App() {
                       I added a variety of new data visualization charts to the
                       site using data from the City of Kingston, Statistics
                       Canada, and the Government of Ontario. To facilitate data
-                      visualization for very large datasets, I modified how
-                      Statistics Canada data is obtained by filtering before
-                      data collection. To modernize the project, I updated the
-                      build process from Create React App to Webpack. I
-                      refactored the codebase to use common filtering elements
-                      to reduce duplicated code.
+                      fetching and processing for datasets that can exceed 9GB
+                      in size when uncompressed, I modified how Statistics
+                      Canada data is obtained. This was done by requesting
+                      pre-filtered data from Statistics Canada before fetching
+                      and further processing the data on the project's backend.
+                      To modernize the project, I updated the build process from
+                      Create React App to Webpack. I also refactored the
+                      codebase to use common filtering elements to reduce
+                      duplicated code.
                     </p>
                   }
                 />
@@ -277,7 +283,7 @@ function App() {
             </div>
 
             <div id="Freelance" className="flexCol">
-              <div className="projectHeader">
+              <div className="header">
                 <img src={freelance} />
                 <hr />
                 <a
@@ -320,6 +326,94 @@ function App() {
 
           <div id="experience" className="flexCol">
             <h1>Experience</h1>
+            {/* Queen's CAC */}
+            <div className="header experienceHeader">
+              {/* <img src={queensCAC} />
+              <hr /> */}
+              <h2>Software Development Intern</h2>
+
+              <div>
+                <h3>May 2024</h3> <hr /> <h3>June 2025</h3>
+              </div>
+            </div>
+            <div className="subHeader">
+              <div>
+                <h3>Queen's Centre for Advanced Computing</h3>
+              </div>
+              <h3>Kingston, ON</h3>
+            </div>
+            <p className="experienceText">
+              At the Queen's CAC I designed and updated a variety of different
+              data visualizations across multiple different web-based projects.
+              In one project, I optimized data fetching and processing to
+              accommodate datasets exceeding 9GB in size when uncompressed. I
+              took the initiative to update build tools, security practices,
+              code components, and authentication pathways for these web-based
+              projects to improve the development experience and improve the
+              quality of our work. I worked extensively in C++ for one project
+              to collect and process data from a medical device to visualize
+              different results for an end user. This was done using a custom
+              OpenGL renderer with lighting, animations, and 3D visualizations
+              of the device.
+            </p>
+
+            {/* TA */}
+            <div className="header experienceHeader">
+              {/* <img src={queensCAC} />
+              <hr /> */}
+              <h2>Teaching Assistant</h2>
+
+              <div>
+                <h3>September 2023</h3> <hr /> <h3>Present</h3>
+              </div>
+            </div>
+            <div className="subHeader">
+              <div>
+                <h3>Queen's University</h3>
+              </div>
+              <h3>Kingston, ON</h3>
+            </div>
+            <p className="experienceText">
+              I am currently a teaching assistant for CISC 124 (Introduction to
+              Computer Science II) and previously for CISC 121 (Introduction to
+              Computer Science). My responsibilities include holding weekly
+              office hours to help guide students through their difficulties
+              regarding course content or assignment requirements. I am also
+              responsible for marking assignments and tests and providing
+              detailed feedback to help students improve their future work.
+            </p>
+
+            {/* QTMA */}
+            <div className="header experienceHeader">
+              {/* <img src={queensCAC} />
+              <hr /> */}
+              <h2>Software Developer</h2>
+
+              <div>
+                <h3>April 2023</h3> <hr /> <h3>March 2025</h3>
+              </div>
+            </div>
+            <div className="subHeader">
+              <div>
+                <h3>Queen's Technology & Media Association</h3>
+              </div>
+              <h3>Kingston, ON</h3>
+            </div>
+            <p className="experienceText">
+              At QTMA I was a collaborator and developer for two projects,{" "}
+              <strong>Pantree</strong> and <strong>Fujiplans</strong>. Pantree
+              was a TypeScript-based Chrome extension that notified users when
+              their groceries were likely to expire. The product could
+              automatically grab groceries from the user's Instacart orders or
+              they could be manually entered by the user. I was responsible for
+              implementing user authentication and database integrations for the
+              extension. Fujiplans was a TypeScript-based AI lesson plan
+              generator for elementary school teachers. I was responsible for
+              the lesson plan generation page where the user could select
+              relevant topics and add additional information for their lesson
+              plan. I also created the lesson plan viewer / editor page and a
+              favourites page where users could see their past plans.
+            </p>
           </div>
         </main>
         <div className="dummy" />

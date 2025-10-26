@@ -26,7 +26,7 @@ export const Background = ({ children }: { children: ReactNode }) => {
   }>({ x: 0, y: 0 });
 
   const clampDelta = (newVal: number, oldVal: number, maxDelta = 1) => {
-    // Make it so that a value can only change by one pixel max per fram
+    // Make it so that a value can only change by one pixel max per frame
     const delta = newVal - oldVal;
     if (Math.abs(delta) > maxDelta) {
       return oldVal + Math.sign(delta) * maxDelta;
@@ -71,7 +71,7 @@ export const Background = ({ children }: { children: ReactNode }) => {
   };
 
   const calcMove = (mousePos: number, scrollPos: number) => {
-    return mousePos / 2000 - scrollPos / 750;
+    return mousePos / 1200 - scrollPos / 75;
   };
 
   useEffect(() => {
