@@ -126,7 +126,7 @@ function App() {
               target="_blank"
               className="socialLink"
             >
-              {/* <img className="socialIcon blur" src={github} /> */}
+              <img className="socialIcon blur" src={github} />
               <img className="socialIcon" src={github} />
             </a>
             <a
@@ -134,7 +134,7 @@ function App() {
               className="socialLink"
               target="_blank"
             >
-              {/* <img className="socialIcon blur" src={linkedIn} /> */}
+              <img className="socialIcon blur" src={linkedIn} />
               <img className="socialIcon" src={linkedIn} />
             </a>
           </div>

@@ -215,15 +215,22 @@ hr {
 .socialIcon.blur {
   filter: blur(8px)  brightness(70%);
   transform: scale(0.95);
-  /* box-shadow: 0px 0px 12px 4px white; */
-  transition: filter 0.2s ease, transform 0.25s ease;
-  /* , box-shadow 0.3s ease; */
+  box-shadow: 0px 0px 12px 4px white;
+  transition: filter 0.2s ease, transform 0.25s ease, box-shadow 0.3s ease;
 }
 
-.socialIcon.blur:hover {
+.socialLink:hover .socialIcon.blur {
   /* filter: blur(6px); */
-  transform: scale(1);
+  transform: scale(1.05);
   /* box-shadow: 0px 0px 5px 9px white; */
+}
+
+a.socialLink {
+  filter: none;
+}
+
+a.socialLink:hover {
+  filter: none;
 }
 
 @keyframes spin {
