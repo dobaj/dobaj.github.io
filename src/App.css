@@ -97,14 +97,14 @@ hr {
 .header {
   display: flex;
   align-items: center;
-  height: 4em;
+  min-height: 4em;
   margin-bottom: 0.5em;
   width: 100%;
   box-sizing: border-box;
 }
 
 .header > img {
-  height: 100%;
+  height: 4.5em;
 }
 
 .header > h2 {
@@ -121,67 +121,6 @@ hr {
 
 .collapse img {
   height: 3em;
-}
-
-.experienceHeader {
-  margin-bottom: 0;
-  justify-content: space-between;
-  height: 3em;
-}
-
-.experienceHeader h2 {
-  font-size: 1.75em;
-  font-weight: 725;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 0;
-}
-.experienceHeader div {
-  display: flex;
-  align-items: center;
-}
-
-.experienceHeader hr {
-  width: 2ch;
-  margin-left: 2ch;
-  margin-right: 2ch;
-}
-
-.subHeader {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1em;
-  padding-left: 2em;
-  width: 100%;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.subHeader h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.experienceText {
-  margin-block-start: 0em;
-  margin-block-end: 2em;
-  padding-left: 4em;
-  box-sizing: border-box;
-}
-
-@media screen and (max-width: 30rem) {
-  .header hr,
-  .header > img {
-    display: none;
-  }
-  .indent,
-  .header {
-    padding-left: 0em;
-  }
-
-  .flexCol h1 {
-    padding-left: 1rem;
-  }
 }
 
 /* Social icons */
@@ -282,6 +221,12 @@ em {
   padding-bottom: 0em; */
 }
 
+.shortform {
+  display: none !important;
+  white-space: pre-wrap;
+  text-align: end;
+}
+
 @media screen and (max-width: 80rem) {
   nav,
   .dummy {
@@ -300,7 +245,8 @@ em {
   }
 
   .flexCol {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .socialRow {
@@ -314,5 +260,29 @@ em {
     margin-left: 1em;
     margin-right: 1em;
     width: 2ch;
+  }
+}
+
+
+@media screen and (max-width: 30rem) {
+  .header hr,
+  .header > img {
+    display: none;
+  }
+  .header > h2 {
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+  .indent,
+  .header {
+    padding-left: 0em;
+  }
+
+  .longform {
+    display: none !important;
+  }
+
+  .shortform {
+    display: inherit !important;
   }
 }

@@ -57,3 +57,7 @@ span {
 body {
   margin: 0;
 }
+
+.title {
+  text-align: center;
+}

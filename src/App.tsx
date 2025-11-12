@@ -34,6 +34,7 @@ import { Background } from "./components/Background";
 import { useEffect, useState } from "react";
 import { createHandleScroll, scrollToId } from "./components/ScrollEffects";
 import { Project } from "./components/Project";
+import { Experience } from "./components/Experience";
 
 function App() {
   const name = "Hi! I'm Matt";
@@ -344,23 +345,12 @@ function App() {
           <div id="experience" className="flexCol">
             <h1>Experience</h1>
             {/* Queen's CAC */}
-            <div className="header experienceHeader">
-              {/* <img src={queensCAC} />
-              <hr /> */}
-              <h2>Software Development Intern</h2>
-
-              <div>
-                <h3>May 2024</h3> <hr /> <h3>June 2025</h3>
-              </div>
-            </div>
-            <div className="subHeader">
-              <div>
-                <h3>Queen's Centre for Advanced Computing</h3>
-              </div>
-              <h3>Kingston, ON</h3>
-            </div>
-            <p className="experienceText">
-              At the Queen's CAC I designed and updated a variety of different
+            <Experience 
+              jobTitle="Software Development Intern"
+              timeSpan={["May 2024","June 2025"]}
+              employer="Queen's Centre for Advanced Computing"
+              location="Kingston, Ontario"
+              description={<>At the Queen's CAC I designed and updated a variety of different
               data visualizations across multiple different web-based projects.
               In one project, I optimized data fetching and processing to
               accommodate datasets exceeding 9GB in size when uncompressed. I
@@ -371,53 +361,31 @@ function App() {
               to collect and process data from a medical device to visualize
               different results for an end user. This was done using a custom
               OpenGL renderer with lighting, animations, and 3D visualizations
-              of the device.
-            </p>
+              of the device.</>}
+            />
 
             {/* TA */}
-            <div className="header experienceHeader">
-              {/* <img src={queensCAC} />
-              <hr /> */}
-              <h2>Teaching Assistant</h2>
-
-              <div>
-                <h3>September 2023</h3> <hr /> <h3>Present</h3>
-              </div>
-            </div>
-            <div className="subHeader">
-              <div>
-                <h3>Queen's University</h3>
-              </div>
-              <h3>Kingston, ON</h3>
-            </div>
-            <p className="experienceText">
-              I am currently a teaching assistant for CISC 124 (Introduction to
+            <Experience 
+              jobTitle="Teaching Assistant"
+              timeSpan={["September 2023","Present"]}
+              employer="Queen's University"
+              location={"Kingston, Ontario"}
+              description={<>I am currently a teaching assistant for CISC 124 (Introduction to
               Computer Science II) and previously for CISC 121 (Introduction to
               Computer Science). My responsibilities include holding weekly
               office hours to help guide students through their difficulties
               regarding course content or assignment requirements. I am also
               responsible for marking assignments and tests and providing
-              detailed feedback to help students improve their future work.
-            </p>
+              detailed feedback to help students improve their future work.</>}
+            />
 
             {/* QTMA */}
-            <div className="header experienceHeader">
-              {/* <img src={queensCAC} />
-              <hr /> */}
-              <h2>Software Developer</h2>
-
-              <div>
-                <h3>April 2023</h3> <hr /> <h3>March 2025</h3>
-              </div>
-            </div>
-            <div className="subHeader">
-              <div>
-                <h3>Queen's Technology & Media Association</h3>
-              </div>
-              <h3>Kingston, ON</h3>
-            </div>
-            <p className="experienceText">
-              At QTMA I was a collaborator and developer for two projects,{" "}
+            <Experience 
+              jobTitle="Software Developer"
+              timeSpan={["April 2023","March 2025"]}
+              employer="Queen's Technology & Media Association"
+              location={"Kingston, Ontario"}
+              description={<>At QTMA I was a collaborator and developer for two projects,{" "}
               <strong>Pantree</strong> and <strong>Fujiplans</strong>. Pantree
               was a TypeScript-based Chrome extension that notified users when
               their groceries were likely to expire. The product could
@@ -429,8 +397,8 @@ function App() {
               the lesson plan generation page where the user could select
               relevant topics and add additional information for their lesson
               plan. I also created the lesson plan viewer / editor page and a
-              favourites page where users could see their past plans.
-            </p>
+              favourites page where users could see their past plans.</>}
+            />
           </div>
         </main>
         <div className="dummy" />
