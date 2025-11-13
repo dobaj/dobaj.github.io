@@ -261,6 +261,10 @@ em {
     margin-right: 1em;
     width: 2ch;
   }
+
+  .indent {
+    padding-left: 1em;
+  }
 }
 
 
@@ -269,10 +273,12 @@ em {
   .header > img {
     display: none;
   }
+
   .header > h2 {
     margin-left: 0em;
     margin-right: 0em;
   }
+
   .indent,
   .header {
     padding-left: 0em;

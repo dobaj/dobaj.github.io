@@ -1,7 +1,7 @@
 .project {
-  padding-left: 4em;
-  padding-right: 2em;
-  margin-bottom: 1.5em;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   box-sizing: border-box;
 }
@@ -37,6 +37,17 @@
   display: inline-block;
 }
 
+
+@media screen and (min-width: 50rem) and (max-width: 80rem) {
+  .technologies {
+    height: 3em;
+  }
+
+  .project {
+    padding-right: 0rem;
+  }
+}
+
 @media screen and (max-width: 50rem) {
   .photos,
   .technologies {
@@ -51,20 +62,15 @@
   }
 
   .project {
-    padding-left: 2em;
-  }
-
-  .indent {
-    padding-left: 1em;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
-@media screen and (min-width: 50rem) and (max-width: 80rem) {
-  .technologies {
-    height: 3em;
-  }
 
+@media screen and (max-width: 30rem) {
   .project {
-    padding-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
